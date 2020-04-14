@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorLy", "DoctorLy\DoctorLy.csproj", "{3F0248F6-61CE-4A58-A3E3-857B9DCD2B3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorLyTest", "DoctorLyTest\DoctorLyTest.csproj", "{E23DDE34-8DF4-4601-87A9-35D21DD506AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorLyApp", "DoctorLyApp\DoctorLyApp.csproj", "{DD8D8190-F79C-4FC7-90F0-19490FDF0DB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F0248F6-61CE-4A58-A3E3-857B9DCD2B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F0248F6-61CE-4A58-A3E3-857B9DCD2B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F0248F6-61CE-4A58-A3E3-857B9DCD2B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F0248F6-61CE-4A58-A3E3-857B9DCD2B3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E23DDE34-8DF4-4601-87A9-35D21DD506AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23DDE34-8DF4-4601-87A9-35D21DD506AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E23DDE34-8DF4-4601-87A9-35D21DD506AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E23DDE34-8DF4-4601-87A9-35D21DD506AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD8D8190-F79C-4FC7-90F0-19490FDF0DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD8D8190-F79C-4FC7-90F0-19490FDF0DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD8D8190-F79C-4FC7-90F0-19490FDF0DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD8D8190-F79C-4FC7-90F0-19490FDF0DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40DA0EB8-7CB5-486B-910B-B25E54D043AC}
+	EndGlobalSection
+EndGlobal
