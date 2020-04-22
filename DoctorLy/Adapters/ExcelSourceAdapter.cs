@@ -21,6 +21,10 @@ namespace DoctorLy.Adapters
         public List<string> PKs { get; set; }
         public IImportation transformator { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetDate()
         {
             string fileExtension = "";

@@ -23,6 +23,7 @@ namespace DoctorLyApp
             InitializeComponent();
         }
 
+      
         private void BtnStartMigrate_Click(object sender, EventArgs e)
         {
 
@@ -86,7 +87,7 @@ namespace DoctorLyApp
         {
             // Source  Adapter
 
-            XMLSourceAdapter sourceAdapter =(XMLSourceAdapter) new SourceAdapterFactory().CreateAdapter("xml");
+            XMLSourceAdapter sourceAdapter =(XMLSourceAdapter) new SourceAdapterFactory().CreateAdapter(drpSourceType.SelectedValue.ToString());
             sourceAdapter.ID = new Guid();
             sourceAdapter.AdapterName = "XMLCustomersAdapter";
             sourceAdapter.FilePath = @"D:\sample.xml";
@@ -147,38 +148,46 @@ namespace DoctorLyApp
 
         private void PopulateSourceAdapter()
         {
-            ComboboxItem item = new ComboboxItem();
-            item.Text = "XML File";
-            item.Value = "xml";
-            drpSourceType.Items.Add(item);
+           
 
-            item.Text = "Json File";
-            item.Value = "json";
-            drpSourceType.Items.Add(item);
+            var type = typeof(ISourceAdapter);
+            var types = AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(s => s.GetTypes())
+                .Where(p => type.IsAssignableFrom(p))
+                .Select(x => new { Name = x.Name }).ToList();
 
-            item.Text = "Excel File";
-            item.Value = "excel";
-            drpSourceType.Items.Add(item);
 
-            item.Text = "SQL";
-            item.Value = "sql";
-            drpSourceType.Items.Add(item);
-
-            item.Text = "API";
-            item.Value = "api";
-            drpSourceType.Items.Add(item);
-
-            drpSourceType.SelectedIndex = 0;
+            drpSourceType.DataSource = types;
+            drpSourceType.DisplayMember = "Name";
+            drpSourceType.ValueMember = "Name";
         }
 
-        public class ComboboxItem
-        {
-            public string Text { get; set; }
-            public object Value { get; set; }
+      
 
-            public override string ToString()
+        private void drpSourceType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string  usercontrolname = "";
+            switch (drpSourceType.SelectedValue)
             {
-                return Text;
+                case "XMLSourceAdapter":
+                    usercontrolname = "XMLUserControl";
+                    break;
+
+                case "ExcelSourceAdapter":
+                    usercontrolname = "ExcelUserControl";
+                    break;
+
+            }
+
+            if (usercontrolname != "")
+            {
+              
+                var control = (Control)Activator.CreateInstance(Type.GetType("DoctorLyApp.UserControls." + usercontrolname));
+                for (int i=0;i< panel1.Controls.Count;++i)
+                {
+                    panel1.Controls.RemoveAt(i);
+                }
+                panel1.Controls.Add(control);
             }
         }
     }

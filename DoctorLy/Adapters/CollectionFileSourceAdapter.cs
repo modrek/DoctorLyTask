@@ -20,6 +20,10 @@ namespace DoctorLy.Adapters
         string FileExtention;
         int QtyGetFilePerRequest;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetDate()
         {
             throw new NotImplementedException();

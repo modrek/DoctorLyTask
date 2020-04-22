@@ -19,3 +19,5 @@ C:\Users\Mohammad\Desktop\DoctoLyMigrate\DoctorLyApp\obj\Debug\DoctorLyApp.cspro
 C:\Users\Mohammad\Desktop\DoctoLyMigrate\DoctorLyApp\obj\Debug\DoctorLyApp.csproj.CopyComplete
 C:\Users\Mohammad\Desktop\DoctoLyMigrate\DoctorLyApp\obj\Debug\DoctorLyApp.exe
 C:\Users\Mohammad\Desktop\DoctoLyMigrate\DoctorLyApp\obj\Debug\DoctorLyApp.pdb
+C:\Users\Mohammad\Desktop\DoctoLyMigrate\DoctorLyApp\obj\Debug\DoctorLyApp.UserControls.XMLUserControl.resources
+C:\Users\Mohammad\Desktop\DoctoLyMigrate\DoctorLyApp\obj\Debug\DoctorLyApp.UserControls.ExcelUserControl.resources

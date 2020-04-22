@@ -24,7 +24,10 @@ namespace DoctorLy.Adapters
 
         public string PayloadData;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetDate()
         {
             string result = CallAPI(URL, PayloadData);
@@ -32,6 +35,12 @@ namespace DoctorLy.Adapters
             return dt;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="APIUrl"></param>
+        /// <param name="Request"></param>
+        /// <returns></returns>
         private static string CallAPI(string APIUrl, string Request)
         {
 
